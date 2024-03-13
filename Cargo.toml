@@ -7,3 +7,5 @@ edition = "2021"
 
 [dependencies]
 vec-utilities = { git = "https://github.com/AnBowell/vec-utilities.git", branch = "feat-generics" }
+num = "0.4.1"
+rustfft = "6.2.0"

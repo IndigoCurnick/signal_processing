@@ -1,16 +1,7 @@
+pub mod correlation;
+pub mod differential_signal_vector_magnitude;
+pub mod energy_entropy;
 pub mod hjorth;
-
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
+pub mod signal_magnitude_area;
+pub mod signal_vector_magnitude;
+pub mod signals;
