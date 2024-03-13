@@ -6,3 +6,4 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+vec-utilities = { git = "https://github.com/AnBowell/vec-utilities.git", branch = "feat-generics" }
