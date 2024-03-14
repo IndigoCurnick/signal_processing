@@ -1,27 +1,27 @@
-trait Hjorth<T> {
-    fn activity(&self) -> T;
-    fn mobility(&self) -> T;
-    fn complexity(&self) -> T;
+pub trait Hjorth<T> {
+    fn hjorth_activity(&self) -> T;
+    fn hjorth_mobility(&self) -> T;
+    fn hjorth_complexity(&self) -> T;
 }
 
 macro_rules! impl_hjorth {
     ($float:ty) => {
         impl Hjorth<$float> for Vec<$float> {
-            fn activity(&self) -> $float {
+            fn hjorth_activity(&self) -> $float {
                 let n = self.len() as $float;
                 let sum_squared = self.iter().map(|x| x.powf(2.0)).sum::<$float>();
                 sum_squared / n
             }
 
-            fn mobility(&self) -> $float {
+            fn hjorth_mobility(&self) -> $float {
                 let n = self.len() as $float;
                 let derivative = self.windows(2).map(|w| w[1] - w[0]).collect::<Vec<_>>();
                 let sum_squared_derivative = derivative.iter().map(|x| x.powi(2)).sum::<$float>();
-                let activity = self.activity();
+                let activity = self.hjorth_activity();
                 (sum_squared_derivative / n).sqrt() / activity.sqrt()
             }
 
-            fn complexity(&self) -> $float {
+            fn hjorth_complexity(&self) -> $float {
                 let n = self.len() as $float;
                 let second_derivative = self
                     .windows(3)
@@ -31,7 +31,7 @@ macro_rules! impl_hjorth {
                     .iter()
                     .map(|x| x.powf(2.0))
                     .sum::<$float>();
-                let mobility = self.mobility();
+                let mobility = self.hjorth_mobility();
                 (sum_squared_second_derivative / n).sqrt() / mobility.sqrt()
             }
         }
