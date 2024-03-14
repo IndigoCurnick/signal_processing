@@ -1,4 +1,4 @@
-fn signal_vector_magnitude(measurements: &[f64]) -> Option<f64> {
+pub fn signal_vector_magnitude(measurements: &[f64]) -> Option<f64> {
     let count = measurements.len();
 
     if count == 0 {
