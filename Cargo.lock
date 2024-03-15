@@ -19,7 +19,7 @@ dependencies = [
  "num-integer",
  "num-iter",
  "num-rational",
- "num-traits 0.2.18 (registry+https://github.com/rust-lang/crates.io-index)",
+ "num-traits",
 ]
 
 [[package]]
@@ -30,7 +30,7 @@ checksum = "608e7659b5c3d7cba262d894801b9ec9d00de989e8a82bd4bef91d08da45cdc0"
 dependencies = [
  "autocfg",
  "num-integer",
- "num-traits 0.2.18 (registry+https://github.com/rust-lang/crates.io-index)",
+ "num-traits",
 ]
 
 [[package]]
@@ -39,7 +39,7 @@ version = "0.4.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "23c6602fda94a57c990fe0df199a035d83576b496aa29f4e634a8ac6004e68a6"
 dependencies = [
- "num-traits 0.2.18 (registry+https://github.com/rust-lang/crates.io-index)",
+ "num-traits",
 ]
 
 [[package]]
@@ -48,7 +48,7 @@ version = "0.1.46"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7969661fd2958a5cb096e56c8e1ad0444ac2bbcd0061bd28660485a44879858f"
 dependencies = [
- "num-traits 0.2.18 (registry+https://github.com/rust-lang/crates.io-index)",
+ "num-traits",
 ]
 
 [[package]]
@@ -59,7 +59,7 @@ checksum = "d869c01cc0c455284163fd0092f1f93835385ccab5a98a0dcc497b2f8bf055a9"
 dependencies = [
  "autocfg",
  "num-integer",
- "num-traits 0.2.18 (registry+https://github.com/rust-lang/crates.io-index)",
+ "num-traits",
 ]
 
 [[package]]
@@ -71,7 +71,7 @@ dependencies = [
  "autocfg",
  "num-bigint",
  "num-integer",
- "num-traits 0.2.18 (registry+https://github.com/rust-lang/crates.io-index)",
+ "num-traits",
 ]
 
 [[package]]
@@ -79,14 +79,6 @@ name = "num-traits"
 version = "0.2.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "da0df0e5185db44f69b44f26786fe401b6c293d1907744beaa7fa62b2e5a517a"
-dependencies = [
- "autocfg",
-]
-
-[[package]]
-name = "num-traits"
-version = "0.2.18"
-source = "git+https://github.com/rust-num/num-traits.git?branch=master#eb20b4022c2dd8191ddd1160399d927886830764"
 dependencies = [
  "autocfg",
 ]
@@ -108,7 +100,7 @@ checksum = "43806561bc506d0c5d160643ad742e3161049ac01027b5e6d7524091fd401d86"
 dependencies = [
  "num-complex",
  "num-integer",
- "num-traits 0.2.18 (registry+https://github.com/rust-lang/crates.io-index)",
+ "num-traits",
  "primal-check",
  "strength_reduce",
  "transpose",
@@ -143,10 +135,7 @@ dependencies = [
 [[package]]
 name = "vec-utilities"
 version = "0.1.0"
-source = "git+https://github.com/AnBowell/vec-utilities.git?branch=feat-generics#bcabe48360f2c51ea557cd3d2d2a9137077cecaa"
-dependencies = [
- "num-traits 0.2.18 (git+https://github.com/rust-num/num-traits.git?branch=master)",
-]
+source = "git+https://github.com/AnBowell/vec-utilities.git?branch=feat-generics#0c25a8f4b5f01c8c811f8752eb3c507557d0f44d"
 
 [[package]]
 name = "version_check"

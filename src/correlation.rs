@@ -1,6 +1,7 @@
+use num::Float;
 use vec_utilities::maths::stats::Statistics;
 
-pub fn correlation(ai: &[f64], aj: &[f64]) -> f64 {
+pub fn correlation<T: Float>(ai: &[f64], aj: &[f64]) -> f64 {
     // TODO: Potential error handling
     let ai_mean = ai.iter().mean().unwrap();
     let aj_mean = aj.iter().mean().unwrap();
